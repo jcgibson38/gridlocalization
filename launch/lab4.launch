@@ -1,0 +1,30 @@
+<!--
+<launch>
+	<node 	name="stage"
+		pkg="stage_ros"
+		type="stageros"
+		args="$(find lab2)/world/playground.world" />
+	<node 	name="ransac"
+		pkg="lab2"
+		type="ransac.py"/>
+	<node 	name="rviznode"
+		pkg="rviz"
+		type="rviz"
+		args="-d $(find lab2)/config/test.rviz"/>
+</launch>
+-->
+<launch>
+	<node
+		name="rviznode"
+		pkg="rviz"
+		type="rviz"
+		args="-d $(find lab4)/config/myconfig.rviz"/>
+	<node
+		name="landmarks"
+		pkg="lab4"
+		type="landmarks.py"/>
+	<node
+		name="main"
+		pkg="lab4"
+		type="run.py"/>
+</launch>
